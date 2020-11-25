@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("images/calc.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.calculator-space{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-space > button{
+  cursor: pointer;
+  font-size: 2rem;
+  color:white;
+  border: 1px solid blue;
+  background-color: black;
+}
+.calculator-space > button:hover{
+  background-color: teal;
+}
+.span{
+  grid-column: span 2;
+}
+.output{
+  grid-column: 1/ -1;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-function{
+  color: black;
+  font-size: 20px;
+}
+.output .present-function{
+  color: black;
+  font-size: 30px;
+}
